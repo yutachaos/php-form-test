@@ -12,11 +12,11 @@
 <form action="" method="post">
     <div>
         名前：<input type="text" name="name"/><br/>
-        <p><? echo $form->getNameError() ?></p>
+        <p><? echo $form->getInput('name')->getErrors() ?></p>
         住所：<input type="text" name="address"/><br/>
-        <p><? echo $form->getAddressError() ?></p>
+        <p><? echo $form->getInput('address')->getErrors() ?></p>
         年齢：<input type="text" name="age"/><br/>
-        <p><? echo $form->getAgeError() ?></p>
+        <p><? echo $form->getInput('age')->getErrors() ?></p>
         <h5>備考</h5>
         <textarea name="note" rows="8" cols="40"></textarea>
         <div>

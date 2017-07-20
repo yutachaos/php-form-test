@@ -1,19 +1,23 @@
 <?php
 
-use Entity\Form;
+use Model\TestForm;
 
-require_once '../Entity/Form.php';
+require_once '../Rule/NotBlank.php';
+require_once '../Model/Form.php';
+require_once '../Model/Input.php';
+require_once '../Model/TestForm.php';
+
 
 if (empty($_POST)) {
-    $form = new Form();
+    $form = new TestForm();
 } else {
-    $form = new Form(true);
-    $form->setName($_POST['name'])
-        ->setAddress($_POST['address'])
-        ->setNote($_POST['note']);
+    $form = new TestForm(true);
+    foreach ($_POST as $key => $value){
+        $form->setValue($key,$value);
+    }
 }
 
-if ($form->isValid()) {
+if ($form->isValid() && $form->isSubmitted()) {
     require_once('../confirm.php');
 } else {
     require_once('../form.php');
