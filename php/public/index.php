@@ -1,20 +1,31 @@
 <?php
 
-use Entity\Form;
+$errors = validate($_POST);
 
-require_once '../Entity/Form.php';
-
-if (empty($_POST)) {
-    $form = new Form();
-} else {
-    $form = new Form(true);
-    $form->setName($_POST['name'])
-        ->setAddress($_POST['address'])
-        ->setNote($_POST['note']);
-}
-
-if ($form->isValid()) {
+if (empty($errors)) {
     require_once('../confirm.php');
 } else {
     require_once('../form.php');
+}
+
+
+function validate($post)
+{
+    if (empty($post)) {
+        $errors['name'] = '';
+        $errors['age'] = '';
+        $errors['address'] = '';
+    } else {
+        if (empty($post['name'])) {
+            $errors['name'] = '名前を入力してください';
+        }
+        if (empty($post['age'])) {
+            $errors['age'] = '年齢を入力してください';
+        }
+        if (empty($post['address'])) {
+            $errors['address'] = '住所を入力してください';
+        }
+    }
+
+    return $errors;
 }
