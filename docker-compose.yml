@@ -1,0 +1,10 @@
+version: '3'
+services:
+  php:
+    image: php:7.0-alpine
+    volumes:
+      - ./php:/home/www-data
+    ports:
+      - "4000:80"
+    working_dir: /home/www-data/public
+    command: php -S 0.0.0.0:80
