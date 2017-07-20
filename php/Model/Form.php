@@ -55,15 +55,17 @@ abstract class Form
     }
 
     /**
-     * @param $name
      *
      * @return mixed
      */
-    public function getError($name)
+    public function getErrors()
     {
-        $input = $this->inputs[$name];
+        $errors = '';
+        foreach ($this->inputs as $input){
+            $errors .= $input->getName().':'.$input->getError()."\n";
+        }
 
-        return $input->getErrors();
+        return $errors;
     }
 
     /**
