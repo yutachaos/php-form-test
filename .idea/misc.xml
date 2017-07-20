@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings load_method="CUSTOM_LOADER" bootstrap_file_path="$USER_HOME$/git/fr-mobileapp-admin/app/bootstrap.php.cache" configuration_file_path="$USER_HOME$/git/fr-mobileapp-admin/app/phpunit.xml.dist" custom_loader_path="$USER_HOME$/git/fr-mobileapp-admin/vendor/autoload.php" phpunit_phar_path="" use_configuration_file="true" />
+      <phpunit_by_interpreter interpreter_id="ba913446-047f-4f59-aad4-f81494a6a422" load_method="CUSTOM_LOADER" bootstrap_file_path="/var/www/mobileapp/app/bootstrap.php.cache" configuration_file_path="/var/www/mobileapp/app/phpunit.xml.dist" custom_loader_path="/var/www/mobileapp/vendor/autoload.php" phpunit_phar_path="/var/www/mobileapp/vendor/bin/phpunit" use_configuration_file="true" />
+    </phpunit_settings>
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AngularJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="VagrantProjectSettings">
+    <option name="instanceFolder" value="$USER_HOME$/git/fr-mobileapp-admin" />
+    <option name="provider" value="virtualbox" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="Copyright.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
