@@ -2,7 +2,7 @@
 
 use Model\TestForm;
 
-require_once '../Impl/RuleInterface.php';
+require_once '../Impl/RuleAbstract.php';
 require_once '../Rule/NotBlank.php';
 require_once '../Model/Form.php';
 require_once '../Model/Input.php';

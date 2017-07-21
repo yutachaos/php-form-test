@@ -2,7 +2,7 @@
 
 namespace Rule;
 
-use Impl\RuleInterface;
+use Impl\RuleAbstract;
 
 /**
  * Created by PhpStorm.
@@ -10,25 +10,8 @@ use Impl\RuleInterface;
  * Date: 2017/07/20
  * Time: 15:56
  */
-class NotBlank implements RuleInterface
+class NotBlank extends RuleAbstract
 {
-
-    private $value;
-    private $name;
-
-    /**
-     * NotBlank constructor.
-     *
-     * @param $value
-     * @param $name
-     */
-    public function __construct($value, $name)
-    {
-        $this->value = $value;
-        $this->name = $name;
-    }
-
-
     /**
      * @return string
      */
