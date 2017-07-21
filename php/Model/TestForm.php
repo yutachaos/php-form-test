@@ -8,6 +8,7 @@
 
 namespace Model;
 
+use Rule\NotBlank;
 
 class TestForm extends Form
 {
@@ -21,9 +22,9 @@ class TestForm extends Form
     {
         parent::__construct($submitted);
 
-        $this->addInput("name", ['NotBlank']);
-        $this->addInput("address", ['NotBlank']);
-        $this->addInput("age", ['NotBlank']);
-        $this->addInput("note");
+        $this->addInput('name', 'text',[NotBlank::class]);
+        $this->addInput('address', 'text',[NotBlank::class]);
+        $this->addInput('age', 'text',[NotBlank::class]);
+        $this->addInput('note','textarea');
     }
 }

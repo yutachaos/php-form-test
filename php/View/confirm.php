@@ -16,7 +16,7 @@
         年齢：<input type="text" name="age" readonly="readonly" value="<? echo $form->getInput('age')->getValue() ?>"/><br/>
         ご意見ご感想：<br/>
         <textarea name="note" rows="8" cols="40" readonly="readonly"><? echo $form->getInput('note')->getValue() ?></textarea><br/>
-        <button type="submit" name="button"> 送信</button>
+        <button type="submit"> 送信</button>
     </div>
 </form>
 

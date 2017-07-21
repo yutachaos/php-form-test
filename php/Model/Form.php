@@ -26,13 +26,14 @@ abstract class Form
 
     /**
      * @param string $name
+     * @param string $type
      * @param array  $rules
      *
      * @return mixed
      */
-    public function addInput($name, $rules = [])
+    public function addInput($name, $type, $rules = [])
     {
-        $this->inputs[$name] = new Input($name, $rules);
+        $this->inputs[$name] = new Input($name, $type, $rules);
     }
 
     /**
@@ -61,7 +62,7 @@ abstract class Form
     public function getErrors()
     {
         $errors = '';
-        foreach ($this->inputs as $input){
+        foreach ($this->inputs as $input) {
             $errors .= $input->getName().':'.$input->getError()."\n";
         }
 
@@ -83,6 +84,7 @@ abstract class Form
                 return false;
             }
         }
+
         return true;
     }
 

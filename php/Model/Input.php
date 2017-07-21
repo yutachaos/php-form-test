@@ -4,20 +4,26 @@ namespace Model;
 
 class Input
 {
+    const TYPE_TEXT = 'text';
+    const TYPE_TEXTAREA = 'textarea';
+
     private $name;
+    private $type;
+    private $rules;
     private $submitted;
     private $value;
-    private $rules;
 
     /**
      * Input constructor.
      *
-     * @param $name
-     * @param $rules
+     * @param       $name
+     * @param       $type
+     * @param array $rules
      */
-    public function __construct($name, array $rules = [])
+    public function __construct($name, $type = self::TYPE_TEXT, array $rules = [])
     {
         $this->name = $name;
+        $this->type = $type;
         $this->rules = $rules;
         $this->submitted = false;
     }
@@ -32,6 +38,15 @@ class Input
     {
         return $this->name;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
 
     /**
      * @return mixed
@@ -70,9 +85,9 @@ class Input
 
         $errors = '';
         foreach ($this->rules as $rule) {
-            $errors .= $rule::getError($this->value, $this->name);
+            $obj = new $rule ($this->value, $this->name);
+            $errors .= $obj->getError();
         }
-
         return $errors;
     }
 
