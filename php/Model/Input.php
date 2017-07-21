@@ -4,9 +4,6 @@ namespace Model;
 
 class Input
 {
-    const TYPE_TEXT = 'text';
-    const TYPE_TEXTAREA = 'textarea';
-
     private $name;
     private $type;
     private $rules;
@@ -20,7 +17,7 @@ class Input
      * @param       $type
      * @param array $rules
      */
-    public function __construct($name, $type = self::TYPE_TEXT, array $rules = [])
+    public function __construct($name, $type, array $rules = [])
     {
         $this->name = $name;
         $this->type = $type;

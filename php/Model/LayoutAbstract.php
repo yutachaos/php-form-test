@@ -25,5 +25,6 @@ abstract class LayoutAbstract
         $this->type = $type;
         $this->name = $name;
     }
+
     abstract public function export();
 }
