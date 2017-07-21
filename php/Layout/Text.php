@@ -1,8 +1,8 @@
 <?php
 
-namespace Layout;
+namespace Model;
 
-use Impl\LayoutInterface;
+use Model\LayoutAbstract;
 
 /**
  * Created by PhpStorm.
@@ -10,12 +10,13 @@ use Impl\LayoutInterface;
  * Date: 2017/07/21
  * Time: 11:30
  */
-class Text implements LayoutInterface
+class Text extends LayoutAbstract
 {
     public function export()
     {
         //TODO layoutの生成処理
         $layout = '名前：<input type="text" name="name"/>';
+
         return $layout;
     }
 }

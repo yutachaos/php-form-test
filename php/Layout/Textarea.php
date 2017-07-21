@@ -2,7 +2,7 @@
 
 namespace Layout;
 
-use Impl\LayoutInterface;
+use Model\LayoutAbstract;
 
 /**
  * Created by PhpStorm.
@@ -10,7 +10,7 @@ use Impl\LayoutInterface;
  * Date: 2017/07/21
  * Time: 11:30
  */
-class Textarea implements LayoutInterface
+class Textarea extends LayoutAbstract
 {
     public function export()
     {
