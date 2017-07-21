@@ -2,11 +2,11 @@
 
 use Model\TestForm;
 
-require_once '../Impl/RuleAbstract.php';
-require_once '../Rule/NotBlank.php';
+require_once '../Model/RuleAbstract.php';
 require_once '../Model/Form.php';
 require_once '../Model/Input.php';
-require_once '../Model/TestForm.php';
+require_once '../Rule/NotBlank.php';
+require_once '../Form/TestForm.php';
 
 
 if (empty($_POST)) {

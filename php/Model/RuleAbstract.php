@@ -1,6 +1,6 @@
 <?php
 
-namespace Impl;
+namespace Model;
 
 /**
  * Created by PhpStorm.

@@ -2,7 +2,7 @@
 
 namespace Rule;
 
-use Impl\RuleAbstract;
+use Model\RuleAbstract;
 
 /**
  * Created by PhpStorm.
