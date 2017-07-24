@@ -15,16 +15,6 @@ abstract class Form
     private $submitted;
 
     /**
-     * form constructor.
-     *
-     * @param bool $submitted
-     */
-    public function __construct($submitted = false)
-    {
-        $this->submitted = $submitted;
-    }
-
-    /**
      * @param string $name
      * @param string $type
      * @param array  $rules
@@ -77,6 +67,18 @@ abstract class Form
         return $this->submitted;
     }
 
+    /**
+     * @param mixed $submitted
+     *
+     * @return Form
+     */
+    public function setSubmitted($submitted)
+    {
+        $this->submitted = $submitted;
+
+        return $this;
+    }
+
     public function isValid()
     {
         foreach ($this->inputs as $input) {
@@ -87,5 +89,7 @@ abstract class Form
 
         return true;
     }
+
+
 
 }

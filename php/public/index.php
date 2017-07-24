@@ -8,13 +8,12 @@ require_once '../Model/Input.php';
 require_once '../Rule/NotBlank.php';
 require_once '../Form/TestForm.php';
 
+$form = new TestForm();
 
-if (empty($_POST)) {
-    $form = new TestForm();
-} else {
-    $form = new TestForm(true);
-    foreach ($_POST as $key => $value){
-        $form->setValue($key,$value);
+if (!empty($_POST)) {
+    $form->setSubmitted(true);
+    foreach ($_POST as $key => $value) {
+        $form->setValue($key, $value);
     }
 }
 

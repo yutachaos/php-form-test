@@ -77,7 +77,7 @@ class Input
     public function getErrors()
     {
         if ($this->submitted === false) {
-            return;
+            return false;
         }
 
         $errors = '';
