@@ -1,7 +1,7 @@
 version: '3'
 services:
   php:
-    image: php:7.0-alpine
+    image: php:7.0.21-alpine
     volumes:
       - ./php:/home/www-data
     ports:

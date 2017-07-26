@@ -16,11 +16,9 @@ class TestForm extends Form
     /**
      * TestForm constructor.
      *
-     * @param bool $submitted
-     */
-    public function __construct($submitted = false)
+     **/
+    public function __construct()
     {
-        parent::__construct($submitted);
 
         $this->addInput('name', 'text',[NotBlank::class]);
         $this->addInput('address', 'text',[NotBlank::class]);
